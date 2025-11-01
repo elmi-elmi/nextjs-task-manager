@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Task Manager
 
-## Getting Started
+A sophisticated yet simple task management application built with Next.js, featuring offline-first capabilities and high-performance metrics.
 
-First, run the development server:
+![Lighthouse Score](./public/score.jpg)
+*Perfect Lighthouse scores across all metrics!*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌟 Key Features
+
+- **Offline-First Architecture**: Utilizes IndexedDB for seamless offline functionality
+- **Real-Time Sync**: Automatically synchronizes data with backend when online
+- **Drag and Drop**: Intuitive task organization with drag-and-drop interface
+- **Progressive Web App (PWA)**: Install and use as a native app
+- **Responsive Design**: Works flawlessly across all devices
+- **High Performance**: Perfect Lighthouse scores (100 across all metrics)
+
+## 💡 Technical Highlights
+
+### Offline-First with IndexedDB
+- Leverages IndexedDB for client-side data persistence
+- Non-blocking UI operations for smooth user experience
+- Background sync queue for offline changes
+- Automatic data synchronization when connection is restored
+
+### Performance Optimization
+- Server-side rendering with Next.js
+- Optimized asset loading and caching
+- Efficient state management with Redux
+- Lazy loading and code splitting
+
+### Project Structure
+```
+├── app/
+│   ├── components/         # React components
+│   ├── hooks/             # Custom React hooks
+│   └── globals.css        # Global styles
+├── components/            # Shared components
+├── constants/             # Application constants
+├── lib/                   # Utility libraries
+├── providers/            # React context providers
+├── store/                # Redux store configuration
+├── sw/                   # Service Worker logic
+├── types/                # TypeScript type definitions
+└── utils/                # Helper functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository**
+```bash
+git clone [repository-url]
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-## Learn More
+3. **Run development server**
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Build for production**
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application will be available at `http://localhost:3000`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Tech Stack
 
-## Deploy on Vercel
+- **Framework**: Next.js with TypeScript
+- **State Management**: Redux Toolkit
+- **Styling**: Material-UI (MUI)
+- **Storage**: IndexedDB
+- **PWA**: Service Workers
+- **DnD**: React Beautiful DnD
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 PWA Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Full offline functionality
+- Background sync
+- Push notifications support
+- Installable on desktop and mobile
+- Automatic updates
+
+## 📊 Performance
+
+This application achieves perfect Lighthouse scores across all metrics:
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+
+## 🔒 Production Considerations
+
+- Implements service worker for offline capabilities
+- Uses IndexedDB for local data persistence
+- Implements sync queue for offline operations
+- Optimized for production with proper caching strategies
+- Responsive design for all device sizes
+
+## 📱 Browser Support
+
+Supports all modern browsers that implement IndexedDB and Service Workers:
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS/Android)
