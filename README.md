@@ -16,7 +16,7 @@ A sophisticated yet simple task management application built with Next.js, featu
 
 ## 💡 Technical Highlights
 
-### Offline-First with IndexedDB
+### Offline-First with IndexedDB (not compolted)
 - Leverages IndexedDB for client-side data persistence
 - Non-blocking UI operations for smooth user experience
 - Background sync queue for offline changes
