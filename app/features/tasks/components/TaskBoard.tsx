@@ -1,7 +1,12 @@
 'use client';
 
 import React from 'react';
-import {DndContext, DragOverlay, closestCenter, closestCorners} from '@dnd-kit/core';
+import {
+  DndContext,
+  DragOverlay,
+  // closestCenter,
+  closestCorners,
+} from '@dnd-kit/core';
 
 import { Box } from '@mui/material';
 import { useTaskBoard } from '../hooks/useTaskBoard';

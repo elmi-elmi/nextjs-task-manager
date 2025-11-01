@@ -222,7 +222,7 @@ async function onFinishDrag(
 
   if (activeContainer === target) {
     console.log('------5------');
-    console.log({activeContainer, target, snapshot, active});
+    console.log({ activeContainer, target, snapshot, active });
 
     const indices = reorderTasksInColumn(
       activeContainer,

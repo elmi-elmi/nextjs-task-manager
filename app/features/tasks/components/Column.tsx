@@ -19,7 +19,7 @@ const Column = ({
   list: Task[];
   id: ColumnKey;
 }) => {
-  const { setNodeRef, isOver } = useDroppable({ id });
+  const { setNodeRef } = useDroppable({ id });
 
   return (
     <DroppableColumn id={id} title={title}>

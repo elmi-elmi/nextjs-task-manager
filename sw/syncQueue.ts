@@ -4,7 +4,7 @@ import type { AppDispatch } from '@/store/store';
 
 const queue = localforage.createInstance({ name: 'taskQueue' });
 
-export type QueuedAction = Parameters<AppDispatch>[0];
+export type QueuedAction = { type: string; payload?: object };
 
 export const enqueueAction = async (action: QueuedAction) => {
   const actions = (await queue.getItem<QueuedAction[]>('actions')) || [];
