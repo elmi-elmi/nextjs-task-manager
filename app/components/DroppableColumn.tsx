@@ -1,4 +1,3 @@
-// ---- ستون قابل دراپ ----
 import { useDroppable } from '@dnd-kit/core';
 import { Paper, Typography } from '@mui/material';
 import { ColumnKey } from '@/types/task';

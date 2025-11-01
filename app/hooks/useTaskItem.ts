@@ -1,14 +1,14 @@
 'use client';
 
-import { useState } from 'react';
-import { useSortable } from '@dnd-kit/sortable';
 import type {
   DraggableAttributes,
   DraggableSyntheticListeners,
 } from '@dnd-kit/core';
+import { useState } from 'react';
 import { CSS } from '@dnd-kit/utilities';
 import { useAppDispatch } from '@/store/hooks';
 import { enqueueAction } from '@/sw/syncQueue';
+import { useSortable } from '@dnd-kit/sortable';
 import { deleteTask, toggleComplete } from '@/store/tasksSlice';
 
 export interface UseTaskItemResult {

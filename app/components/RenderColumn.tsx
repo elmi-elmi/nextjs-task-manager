@@ -1,10 +1,10 @@
-import { ColumnKey, Task } from '@/types/task';
 import {
   SortableContext,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { Box, Paper } from '@mui/material';
 import Item from '@/app/components/Item';
+import { Box, Paper } from '@mui/material';
+import { ColumnKey, Task } from '@/types/task';
 import DroppableColumn from '@/app/components/DroppableColumn';
 
 const RenderColumn = ({

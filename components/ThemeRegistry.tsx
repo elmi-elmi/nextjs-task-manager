@@ -1,4 +1,3 @@
-// components/ThemeRegistry.tsx
 'use client';
 
 import { ThemeProvider } from '@mui/material/styles';

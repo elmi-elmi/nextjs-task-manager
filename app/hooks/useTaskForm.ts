@@ -1,23 +1,23 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { Task } from '@/types/task';
 import { v4 as uuidv4 } from 'uuid';
+import { useForm } from 'react-hook-form';
+import { addTask } from '@/store/tasksSlice';
 import { useAppDispatch } from '@/store/hooks';
 import { enqueueAction } from '@/sw/syncQueue';
-import { addTask } from '@/store/tasksSlice';
-import { Task } from '@/types/task';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { TaskFormData, taskSchema } from '@/lib/validation';
 
 export interface UseTaskFormResult {
+  isSubmitting: boolean;
+  closeToast: () => void;
+  onSubmit: (data: TaskFormData) => Promise<void>;
   register: ReturnType<typeof useForm<TaskFormData>>['register'];
   handleSubmit: ReturnType<typeof useForm<TaskFormData>>['handleSubmit'];
   errors: ReturnType<typeof useForm<TaskFormData>>['formState']['errors'];
-  isSubmitting: boolean;
-  onSubmit: (data: TaskFormData) => Promise<void>;
   toast: { open: boolean; message: string; severity: 'success' | 'error' };
-  closeToast: () => void;
 }
 
 /**
@@ -67,12 +67,12 @@ export function useTaskForm(): UseTaskFormResult {
   const closeToast = () => setToast((t) => ({ ...t, open: false }));
 
   return {
-    register,
-    handleSubmit,
-    errors,
-    isSubmitting,
-    onSubmit,
     toast,
+    errors,
+    onSubmit,
+    register,
     closeToast,
+    handleSubmit,
+    isSubmitting,
   };
 }

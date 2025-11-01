@@ -59,27 +59,23 @@ export default function Item({ task }: TaskItemProps) {
         <Checkbox
           checked={task.completed}
           onChange={handleToggle}
-          inputProps={{
-            'aria-label': task.completed
+          aria-label={
+            task.completed
               ? `Mark ${task.title} as incomplete`
-              : `Mark ${task.title} as completed`,
-          }}
+              : `Mark ${task.title} as completed`
+          }
         />
 
         <Box sx={{ flex: 1 }}>
           <Typography
             variant="subtitle1"
-            component="p" // 👈 تغییر مهم برای جلوگیری از تگ h6
+            component="p"
             sx={{ textDecoration: task.completed ? 'line-through' : 'none' }}
           >
             {task.title}
           </Typography>
           {task.description && (
-            <Typography
-              variant="body2"
-              component="p" // 👈 برای یکنواختی و جلوگیری از heading اشتباه
-              color="text.secondary"
-            >
+            <Typography variant="body2" component="p" color="text.secondary">
               {task.description}
             </Typography>
           )}

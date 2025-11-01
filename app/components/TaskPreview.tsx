@@ -1,4 +1,3 @@
-// ---- پیش‌نمایش هنگام درگ ----
 import { Task } from '@/types/task';
 import { Box, Checkbox, Paper, Typography } from '@mui/material';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
@@ -20,12 +19,10 @@ const TaskPreview = ({ task }: { task?: Task }) => {
         opacity: 0.95,
       }}
     >
-      {/* آیکون درگ */}
       <Box sx={{ cursor: 'grab' }}>
         <DragIndicatorIcon color="action" />
       </Box>
 
-      {/* Checkbox فقط برای حفظ layout */}
       <Checkbox
         checked={task.completed}
         disabled
@@ -35,7 +32,6 @@ const TaskPreview = ({ task }: { task?: Task }) => {
         }}
       />
 
-      {/* محتوای تسک */}
       <Box sx={{ flex: 1 }}>
         <Typography
           variant="subtitle1"

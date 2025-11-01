@@ -40,22 +40,6 @@ export default function List() {
 
   const sensors = useSensors(useSensor(MouseSensor), useSensor(TouchSensor));
 
-  // // ✅ فقط sync وقتی tasks تغییر می‌کنه، بدون هشدار ESLint
-  // useEffect(() => {
-  //   // بهتره داخل useEffect از queueMicrotask استفاده کنیم تا از setState در render جلوگیری بشه
-  //   queueMicrotask(() => {
-  //     setColumns({
-  //       incomplete: tasks.filter((t) => !t.completed),
-  //       completed: tasks.filter((t) => t.completed),
-  //     });
-  //   });
-  // }, [tasks]);
-  // useEffect(() => {
-  //   setColumns({
-  //     incomplete: tasks.filter((t) => !t.completed),
-  //     completed: tasks.filter((t) => t.completed),
-  //   });
-  // }, [tasks]);
   const updateColumns = useEffectEvent(() => {
     setColumns({
       incomplete: tasks.filter((t) => !t.completed),
@@ -64,7 +48,7 @@ export default function List() {
   });
 
   useEffect(() => {
-    updateColumns(); // وقتی tasks تغییر کرد، ستون‌ها آپدیت می‌شوند
+    updateColumns();
   }, [tasks]);
 
   useEffect(() => {
@@ -153,13 +137,11 @@ export default function List() {
         );
       }
     } else {
-      // 🔹 بین دو ستون
       const sourceTasks = [...columns[activeContainer as ColumnKey]];
       const destTasks = [...columns[overContainer as ColumnKey]];
       const activeIndex = sourceTasks.findIndex((t) => t.id === active.id);
       const [movedTask] = sourceTasks.splice(activeIndex, 1);
 
-      // تعیین ایندکس مقصد با استفاده از dnd-kit sortable.index
       type SortableData = { index: number } | undefined;
       const overCurrent = over.data?.current as
         | { sortable?: SortableData }

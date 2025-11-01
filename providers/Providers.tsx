@@ -2,8 +2,8 @@
 
 import { ReactNode } from 'react';
 import { persistor, store } from '@/store/store';
-import { Provider as ReduxProvider } from 'react-redux';
 import ThemeRegistry from '@/components/ThemeRegistry';
+import { Provider as ReduxProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
 const Providers = ({ children }: { children: ReactNode }) => {
