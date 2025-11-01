@@ -1,5 +1,5 @@
 const labels = {
-  appTitle: 'Task Manager - Simple UI, Rich Architecture',
+  appTitle: 'Task Manager - Simple UI, Rich Codes',
   taskTitle: 'Title',
   taskDescription: 'Description',
   addTask: 'Add Task',

@@ -7,11 +7,11 @@ A sophisticated yet simple task management application built with Next.js, featu
 
 ## 🌟 Key Features
 
-- **Offline-First Architecture**: Utilizes IndexedDB for seamless offline functionality
+
 - **Real-Time Sync**: Automatically synchronizes data with backend when online
 - **Drag and Drop**: Intuitive task organization with drag-and-drop interface
-- **Progressive Web App (PWA)**: Install and use as a native app
 - **Responsive Design**: Works flawlessly across all devices
+- **Offline-First Architecture**: Utilizes IndexedDB for seamless offline functionality
 - **High Performance**: Perfect Lighthouse scores (100 across all metrics)
 
 ## 💡 Technical Highlights
@@ -22,11 +22,7 @@ A sophisticated yet simple task management application built with Next.js, featu
 - Background sync queue for offline changes
 - Automatic data synchronization when connection is restored
 
-### Performance Optimization
-- Server-side rendering with Next.js
-- Optimized asset loading and caching
-- Efficient state management with Redux
-- Lazy loading and code splitting
+
 
 ### Project Structure
 ```
@@ -75,16 +71,9 @@ The application will be available at `http://localhost:3000`
 - **State Management**: Redux Toolkit
 - **Styling**: Material-UI (MUI)
 - **Storage**: IndexedDB
-- **PWA**: Service Workers
 - **DnD**: React Beautiful DnD
 
-## 🌐 PWA Features
 
-- Full offline functionality
-- Background sync
-- Push notifications support
-- Installable on desktop and mobile
-- Automatic updates
 
 ## 📊 Performance
 
@@ -102,10 +91,3 @@ This application achieves perfect Lighthouse scores across all metrics:
 - Optimized for production with proper caching strategies
 - Responsive design for all device sizes
 
-## 📱 Browser Support
-
-Supports all modern browsers that implement IndexedDB and Service Workers:
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS/Android)
