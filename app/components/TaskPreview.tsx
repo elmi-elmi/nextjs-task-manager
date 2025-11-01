@@ -1,6 +1,7 @@
 import { Task } from '@/types/task';
-import { Box, Checkbox, Paper, Typography } from '@mui/material';
+import { Box, Checkbox, IconButton, Paper, Typography } from '@mui/material';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
+import { DeleteForever } from '@mui/icons-material';
 
 const TaskPreview = ({ task }: { task?: Task }) => {
   if (!task) return null;
@@ -19,7 +20,7 @@ const TaskPreview = ({ task }: { task?: Task }) => {
         opacity: 0.95,
       }}
     >
-      <Box sx={{ cursor: 'grab' }}>
+      <Box sx={{ cursor: 'grab', padding: '8px' }}>
         <DragIndicatorIcon color="action" />
       </Box>
 
@@ -45,6 +46,10 @@ const TaskPreview = ({ task }: { task?: Task }) => {
           </Typography>
         )}
       </Box>
+
+      <IconButton aria-label={`Delete task: ${task.title}`}>
+        <DeleteForever />
+      </IconButton>
     </Paper>
   );
 };
