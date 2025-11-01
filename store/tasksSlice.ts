@@ -21,7 +21,6 @@ const tasksSlice = createSlice({
     },
 
     toggleComplete: (state, action: PayloadAction<string>) => {
-      console.log('toggleComplete', state, action.payload);
       const task = state.tasks.find((t) => t.id === action.payload);
       if (task) task.completed = !task.completed;
     },

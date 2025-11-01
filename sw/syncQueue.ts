@@ -1,4 +1,3 @@
-// sw/syncQueue.ts
 import localforage from 'localforage';
 import type { AppDispatch } from '@/store/store';
 
@@ -15,7 +14,6 @@ export const enqueueAction = async (action: QueuedAction) => {
 export const flushQueue = async (dispatch: AppDispatch) => {
   const actions = (await queue.getItem<QueuedAction[]>('actions')) || [];
   for (const a of actions) {
-    // dispatch raw action object
     try {
       dispatch(a);
     } catch (err) {
