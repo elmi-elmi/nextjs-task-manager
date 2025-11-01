@@ -75,7 +75,12 @@ export default function Item({ task }: TaskItemProps) {
             {task.title}
           </Typography>
           {task.description && (
-            <Typography variant="body2" component="p" color="text.secondary">
+            <Typography
+              variant="body2"
+              component="p"
+              color="text.secondary"
+              className="line-clamp-1"
+            >
               {task.description}
             </Typography>
           )}
